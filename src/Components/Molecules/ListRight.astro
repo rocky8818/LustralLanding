@@ -1,0 +1,54 @@
+---
+const {title, subtitle} = Astro.props
+---
+
+<div class="listItem">
+    <div class="image">
+        <img src="/snoopy.jpg" alt="">
+    </div>
+    <div class="infoCont">
+        <div class="info">
+            <h1>{title}</h1>
+            <p>{subtitle}</p>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .listItem{
+        justify-self: center;
+        margin: 20px 30px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .infoCont{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        .info{
+            width: 80%;
+            text-align: left;
+    
+            h1{
+                font-size: 40px;
+                font-weight: 500;
+                margin-bottom: 24px;
+            }
+            p{
+                color: #828282;
+                font-size: 24px;
+                font-family: "Plus Jakarta Sans";
+            }
+        }
+    }
+    .image{
+        margin: 0 auto;
+        height: 400px;
+        img{
+            aspect-ratio: 9/6;
+            height: 100%;
+        }
+    }
+</style>

@@ -1,0 +1,59 @@
+---
+import EulaIcon from "../Icons/EulaIcon.astro";
+import PoliticsIcon from "../Icons/PoliticsIcon.astro";
+
+
+---
+
+<div class="politicsCont">
+    <h1>Políticas</h1>
+    <div class="grid">
+        <div class="card">
+            <EulaIcon />
+            <h2>EULA</h2>
+            <p>Aquí puedes leer los términos y condiciones de uso para nuestra App Lustrall.</p>
+        </div>
+        <div class="card">
+            <PoliticsIcon />
+            <h2>Política de privacidad</h2>
+            <p>Conoce nuestra política de privacidad para estar enterado del uso que damos a tus datos.</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    body{
+        font-family: ;
+    }
+    .politicsCont{
+        align-self: flex-start;
+        justify-self: flex-start;
+    }
+    .grid{
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    h1{
+        font-family: "Plus Jakarta Sans";
+        font-size: 40px;
+        font-weight: 600;
+    }
+    h2{
+        font-family: "Plus Jakarta Sans";
+        font-size: 24px;
+        font-weight: 500;
+    }
+    p{
+        font-family: "Plus Jakarta Sans";
+        color: #828282;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 150%;
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+</style>

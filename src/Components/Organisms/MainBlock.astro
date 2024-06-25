@@ -1,0 +1,45 @@
+---
+const {title, subtitle, noButton = false} = Astro.props
+---
+<div class="firstBlock">
+    <h1>{title}</h1>
+    <p>{subtitle}</p>
+    {
+        noButton ? null : <a href="">Descárgalo ya!</a>
+    }
+    
+</div>
+
+
+<style>
+    .firstBlock{
+		justify-self: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 24px;
+		h1{
+			font-size: 64px;
+			font-weight: 400;
+			text-align: center;
+		}
+		p{
+			color: #828282;
+			text-align: center;
+			font-size: 24px;
+			font-family: "Plus Jakarta Sans";
+		}
+		a{
+			text-decoration: none;
+			color: #ffffff;
+			background-color: #000;
+			border-radius: 32px;
+			box-shadow: 0px 1px 2px 0px #000000;
+			font-size: 16;
+			font-family: "Plus Jakarta Sans";
+			padding: 14px 24px;
+
+		}
+	}
+</style>
