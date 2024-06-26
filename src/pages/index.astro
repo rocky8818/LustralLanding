@@ -1,61 +1,81 @@
 ---
 import ContainerMd from "../Components/Containers/ContainerMd.astro";
-import ContainerSm from "../Components/Containers/ContainerSm.astro";
-import ContainerXl from "../Components/Containers/ContainerXl.astro";
-import EulaIcon from "../Components/Icons/EulaIcon.astro";
-import PoliticsIcon from "../Components/Icons/PoliticsIcon.astro";
 import ListLeft from "../Components/Molecules/ListLeft.astro";
 import ListRight from "../Components/Molecules/ListRight.astro";
 import MainBlock from "../Components/Organisms/MainBlock.astro";
 import Politics from "../Components/Organisms/Politics.astro";
 import Layout from "../Layouts/Layout.astro";
-
 ---
 
 <Layout title="Lustral, wedding planner">
-	<section>
-		<ContainerSm padding>
-			<MainBlock title="Todos tus eventos en la palma de tu mano" subtitle="Con Lustrall crea, organiza, confirma. Hazlo todo desde tu teléfono." />
-		</ContainerSm>
-	</section>
-	<section>
-		<ContainerXl>
-			<img class="mainImage" src="/889865e2df8b49c05875c62cf9c5670f.jpg" alt="" style="aspect-ratio: 9/6; width: 90%; justify-self: center">
-		</ContainerXl>
-	</section>
-	<section>
-		<ContainerMd>
-			<MainBlock title="Conviertete en tu propio planner" subtitle="Conoce todo lo que puedes hacer con Lustrall" noButton />
-		</ContainerMd>
-	</section>
-	<section>
-		<ListLeft title="Crea tu propia Landing Page para tu evento" subtitle="A subheading for this section, as long or as short as you like" />
-		<ListRight title="Crea tu propia Landing Page para tu evento" subtitle="A subheading for this section, as long or as short as you like" />
-		<ListLeft title="Crea tu propia Landing Page para tu evento" subtitle="A subheading for this section, as long or as short as you like" />
-		<ListRight title="Crea tu propia Landing Page para tu evento" subtitle="A subheading for this section, as long or as short as you like" />
-	</section>
-	<section>
-		<div style="position: relative;">
-			<img class="signatureImg" src="/Frame.png" alt="">
-		</div>
-	</section>
-	<section style=" margin: 400px 0">
-		<ContainerXl padding>
-			<Politics />
-		</ContainerXl>
-	</section>
+  <section>
+    <MainBlock
+      title="Todos tus eventos en la palma de tu mano"
+      subtitle="Con Lustrall crea, organiza, confirma. Hazlo todo desde tu teléfono."
+    />
+  </section>
+  <section>
+    <div class="bigContainer">
+      <img
+        class="mainImage"
+        src="/889865e2df8b49c05875c62cf9c5670f.jpg"
+        alt=""
+        style="aspect-ratio: 9/6; width: 100%"
+      />
+    </div>
+  </section>
+  <section>
+      <MainBlock
+        title="Conviertete en tu propio planner"
+        subtitle="Conoce todo lo que puedes hacer con Lustrall"
+        noButton
+      />
+  </section>
+  <section>
+    <ListLeft
+      title="Crea tu propia Landing Page para tu evento"
+      subtitle="A subheading for this section, as long or as short as you like"
+    />
+    <ListRight
+      title="Crea tu propia Landing Page para tu evento"
+      subtitle="A subheading for this section, as long or as short as you like"
+    />
+    <ListLeft
+      title="Crea tu propia Landing Page para tu evento"
+      subtitle="A subheading for this section, as long or as short as you like"
+    />
+    <ListRight
+      title="Crea tu propia Landing Page para tu evento"
+      subtitle="A subheading for this section, as long or as short as you like"
+    />
+  </section>
+  <section>
+    <div style="position: relative;">
+      <img class="signatureImg" src="/Frame.png" alt="" />
+    </div>
+  </section>
+  <section style=" margin: 400px 0">
+      <Politics />
+  </section>
 </Layout>
 
-
 <style>
+  section {
+    margin-top: 50px;
+  }
 
-section{
-	margin-top: 50px;
-}
+  .bigContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+	padding: 0 80px;
+  }
 
-.signatureImg{
-		position: absolute;
-		top: -300px;
-		z-index: -1;
-	}
+  .signatureImg {
+    position: absolute;
+    top: -300px;
+    z-index: -1;
+  }
 </style>
