@@ -1,11 +1,11 @@
 ---
-const { title, subtitle } = Astro.props;
+const { title, subtitle, image } = Astro.props;
 ---
 
 <div class="bigContainer">
   <div class="listItem">
     <div class="image">
-      <img src="/snoopy.jpg" alt="" />
+      <img src={image} alt="" />
     </div>
     <div class="infoCont">
       <div class="info">

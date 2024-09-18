@@ -1,0 +1,53 @@
+---
+// Card.astro - Componente para una card individual
+const { title, subtitle, imageUrl } = Astro.props;
+---
+
+<style>
+  .card {
+    background-color: #f7f7f7;
+    height: 510px;
+    border-radius: 8px 8px 0 0; /* Solo la parte superior tiene borde redondeado */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0; /* Se elimina el padding del contenedor principal */
+    box-sizing: border-box;
+    overflow: hidden; /* Para asegurarse de que los bordes redondeados se aplican correctamente */
+  }
+
+  .card-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Espacio alrededor de la imagen */
+  }
+
+  .card-content {
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .card-title {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 5px;
+  }
+
+  .card-subtitle {
+    font-size: 18px;
+    color: #828282;
+  }
+</style>
+
+<div class="card">
+  <div class="card-image">
+    <img src={imageUrl} alt={title} />
+  </div>
+  <div class="card-content">
+    <div class="card-title">{title}</div>
+    <div class="card-subtitle">{subtitle}</div>
+  </div>
+</div>

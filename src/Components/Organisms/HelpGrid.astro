@@ -1,0 +1,47 @@
+---
+import Card from '../Molecules/HelpCard.astro';
+---
+
+<style>
+  .container-large {
+    margin: 0 auto;
+    max-width: 1270px;
+    width: 100%;
+    padding: 0 80px; /* Margen mínimo de 80px a los lados */
+    box-sizing: border-box; /* Asegura que el padding se incluya dentro del tamaño máximo */
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1270px) {
+    .container-large {
+      max-width: 989px;
+    }
+
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="container-large">
+  <div class="grid">
+    <Card title="Como crear una cuenta" subtitle="Iniciando tu viaje en lustral" imageUrl="/images/helpcards/newaccount.svg" />
+    <Card title="Coo eliminar tu cuenta" subtitle="Una forma sencilla y clara" imageUrl="/images/helpcards/deleteaccount.svg" />
+    <Card title="Sin contraseñas" subtitle="Para mayor privacidad de los usuarios" imageUrl="/images/helpcards/nopasswords.svg" />
+    <Card title="Creando tu Landing Page" subtitle="Tu propio sitio de tu evento" imageUrl="/images/helpcards/landing.svg" />
+    <Card title="Como crear un Respaldo" subtitle="Proteger la informacion de tu evento" imageUrl="/images/helpcards/backup.svg" />
+    <Card title="Contratar o cancelar Premium" subtitle="La mejor forma de usar Lustrall" imageUrl="/images/helpcards/premium.svg" />
+  </div>
+</div>
