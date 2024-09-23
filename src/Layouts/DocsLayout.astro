@@ -1,0 +1,79 @@
+---
+const { pathname } = Astro.url;
+let menuCrear = pathname.includes("crear");
+let menuEliminar = pathname.includes("eliminar");
+let menuPassword = pathname.includes("contrasenas");
+let menuLanding = pathname.includes("landing");
+let menuBackup = pathname.includes("backup");
+let menuPremium = pathname.includes("premium");
+
+const topics = [
+  {
+    id: 1,
+    href: "/crear-cuenta",
+    title: "Cómo crear una cuenta",
+    selected: menuCrear,
+  },
+  { id: 2, selected: menuEliminar, href: "eliminar-cuenta", title: "Cómo eliminar tu cuenta" },
+  { id: 3, selected: menuPassword, href: "sin-contrasenas", title: "Sin contraseñas" },
+  { id: 4, selected: menuLanding, href: "landing", title: "Creando tu invitación en línea" },
+  { id: 5, selected: menuBackup, href: "backup", title: "Cómo crear un respaldo" },
+  { id: 6, selected: menuPremium, href: "premium", title: "Contratar o cancelar premium" },
+];
+
+---
+
+<div class="container">
+  <div class="topics-list">
+    {
+      topics.map((topic) => (
+        <div class={`topic-item ${topic.selected ? "selected" : ""}`}>
+          <a href={topic.href}>{topic.title}</a>
+        </div>
+      ))
+    }
+  </div>
+  <div class="content-area">
+    <slot />
+  </div>
+</div>
+
+<style lang="scss">
+  .container {
+    display: flex;
+    padding: 50px 80px;
+  }
+
+  .topics-list {
+    width: 20%;
+    background-color: #f5f5f5;
+    padding: 20px;
+    height: 100%; /* Ajusta la altura según el contenido */
+    border-radius: 16px;
+  }
+
+  .topic-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    a{
+        color: black;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+    }
+  }
+
+  .topic-item.selected {
+    background-color: #ffffff;
+    font-weight: bold;
+    color: black;
+    border-radius: 8px;
+  }
+
+  .content-area {
+    width: 80%;
+    padding: 20px 50px;
+    background-color: #ffffff;
+  }
+</style>

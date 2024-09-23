@@ -2,6 +2,17 @@
 import Card from '../Molecules/HelpCard.astro';
 ---
 
+<div class="container-large">
+  <div class="grid">
+    <Card href="ayuda/crear-cuenta" title="Como crear una cuenta" subtitle="Iniciando tu viaje en lustral" imageUrl="/images/helpcards/newaccount.svg" />
+    <Card href="ayuda/eliminar-cuenta" title="Coo eliminar tu cuenta" subtitle="Una forma sencilla y clara" imageUrl="/images/helpcards/deleteaccount.svg" />
+    <Card href="ayuda/sin-contrasenas" title="Sin contraseñas" subtitle="Para mayor privacidad de los usuarios" imageUrl="/images/helpcards/nopasswords.svg" />
+    <Card href="ayuda/landing" title="Creando tu Landing Page" subtitle="Tu propio sitio de tu evento" imageUrl="/images/helpcards/landing.svg" />
+    <Card href="ayuda/backup" title="Como crear un Respaldo" subtitle="Proteger la informacion de tu evento" imageUrl="/images/helpcards/backup.svg" />
+    <Card href="ayuda/premium" title="Contratar o cancelar Premium" subtitle="La mejor forma de usar Lustrall" imageUrl="/images/helpcards/premium.svg" />
+  </div>
+</div>
+
 <style>
   .container-large {
     margin: 0 auto;
@@ -15,7 +26,7 @@ import Card from '../Molecules/HelpCard.astro';
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin: 0 auto;
+    margin: 80px auto;
   }
 
   @media (max-width: 1270px) {
@@ -34,14 +45,3 @@ import Card from '../Molecules/HelpCard.astro';
     }
   }
 </style>
-
-<div class="container-large">
-  <div class="grid">
-    <Card title="Como crear una cuenta" subtitle="Iniciando tu viaje en lustral" imageUrl="/images/helpcards/newaccount.svg" />
-    <Card title="Coo eliminar tu cuenta" subtitle="Una forma sencilla y clara" imageUrl="/images/helpcards/deleteaccount.svg" />
-    <Card title="Sin contraseñas" subtitle="Para mayor privacidad de los usuarios" imageUrl="/images/helpcards/nopasswords.svg" />
-    <Card title="Creando tu Landing Page" subtitle="Tu propio sitio de tu evento" imageUrl="/images/helpcards/landing.svg" />
-    <Card title="Como crear un Respaldo" subtitle="Proteger la informacion de tu evento" imageUrl="/images/helpcards/backup.svg" />
-    <Card title="Contratar o cancelar Premium" subtitle="La mejor forma de usar Lustrall" imageUrl="/images/helpcards/premium.svg" />
-  </div>
-</div>

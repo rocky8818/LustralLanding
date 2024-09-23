@@ -1,0 +1,25 @@
+---
+import DocsLayout from '../../Layouts/DocsLayout.astro';
+import ProyectViewComponent from '../../Components/Organisms/ProyectViewComponent.astro'; 
+import Layout from '../../Layouts/Layout.astro';
+
+const content = [
+  { subtitulo: "Asegura la información de tu evento", texto: ["Puedes crear un respaldo de la información que contiene tu app Lustrall. Este respaldo crea una copia del estado actual de tu app. Esta información comprende información guardada a nivel celular, como tu mensaje de invitación y checklist, como el diseño de tu invitación en línea  su contenido.", "Solo tu puedes acceder a este respaldo y es responsabilidad tuya crearlo y guardarlo en un lugar seguro.", "Para crear tu respaldo puedes ir a: Menú > Configuración > Crear Respaldo", "Una vez ahí sigue los pasos:", "1. Presiona el botón que dice crear respaldo.", "2. El sistema generará un archivo terminación .lrf", "3. Ese archivo es un respaldo, descárgalo y guardalo en un lugar seguro.", "Ese archivo genera un respaldo del estado actual de la app. Si generas cambios posteriores y después cargas un respaldo no actualizado, esos cambios se perderán.", "Puedes generar tantos respaldos como quieras."] },
+  { subtitulo: "Recomendaciones", texto: ["Te recomendamos utilizar un correo al que tengas acceso desde el celular en el que estás usando Lustrall."] },
+  { subtitulo: "Cómo cargar mi respaldo", texto: ["Para cargar el respaldo que creaste  accede a la misma sección en: Menú > Configuración > Crear Respaldo", "Sigue los pasos:", "1.  En la opción que dice Restaurar, presiona el botón que dice cargar respaldo.", "Ubica el archivo .lfr que guardaste previamente en tu dispositivo, selecciona y dale cargar.", "3. Comfirma tu selección en la pantalla de Alerta.", "El sistema se restaurará hasta el punto donde creaste ese archivo de respaldo.", "Si creaste información nueva posterior a ese respaldo, será eliminada."] },
+];
+
+---
+
+
+<Layout title='Lustral Cómo crear un respaldo'>
+
+    <DocsLayout>
+
+        <ProyectViewComponent 
+        title="Cómo crear un respaldo"
+        icon="backup" 
+        content={content} 
+        />
+    </DocsLayout>
+</Layout>

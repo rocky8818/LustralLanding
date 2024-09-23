@@ -1,0 +1,24 @@
+---
+import DocsLayout from '../../Layouts/DocsLayout.astro';
+import ProyectViewComponent from '../../Components/Organisms/ProyectViewComponent.astro'; 
+import Layout from '../../Layouts/Layout.astro';
+
+const content = [
+  { subtitulo: "¿Por qué Lustrall no utiliza contraseñas?", texto: ["Tu seguridad es muy importante para nosotros, y para evitar la necesidad de crear contraseñas y los posibles riesgos de filtraciones, implementamos un sistema de códigos de acceso únicos que te permiten ingresar a tu Lustrall, simplemente solicitando un nuevo código de 4 números que llegará al correo que tienes asociado con tu cuenta. Este correo es el mismo con el que te diste de alta la primera vez, y es recomendable tenerlo activo en el mismo dispositivo en el que estarás usando Lustrall."] },
+  { subtitulo: "Solicitar un nuevo código de acceso", texto: ["En caso de que hayas cerrado sesión en tu Lustrall y quieras volver a ingresar, solicitar un nuevo código es muy sencillo:", "1. Abre tu app Lustrall.", "2. Volverá a aparecer la pantalla de acceso o registro.", "3. Ingresa el mismo correo con el que te diste de alta la primera vez.","4. Presiona el botón “Envíame mi código de acceso”", "5. En la siguiente pantalla ingresa tu nuevo código "] }
+];
+
+---
+
+
+<Layout title='Lustral Sin contraseñas'>
+
+    <DocsLayout>
+
+        <ProyectViewComponent 
+        title="Sin contraseñas"
+        icon="nopasswords" 
+        content={content} 
+        />
+    </DocsLayout>
+</Layout>

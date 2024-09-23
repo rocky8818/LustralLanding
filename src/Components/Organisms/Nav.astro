@@ -13,7 +13,7 @@ let language = 'ES';
   </div>
   <ul class="menu">
     {menuItems.map(item => (
-      <li><a href={item.href}>{item.label}</a></li>
+      <li><a href={item.href} class={item.label == 'Descargar app' ? 'roundItem' : ''}>{item.label}</a></li>
     ))}
     <li class="language-switcher">
       <button>{language}</button>
@@ -38,12 +38,19 @@ let language = 'ES';
 
 <style>
   
+  .roundItem{
+    background-color: black;
+    color: white !important;
+    border-radius: 32px;
+    padding: 10px;
+  }
 
   .navbar {
+    font-family: 'Plus Jakarta Sans', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 170px;
+    height: 100%;
     padding: 0 20px;
     background-color: #fff;
     border-bottom: 1px solid #ddd;
@@ -51,6 +58,7 @@ let language = 'ES';
 
   .logo img {
     height: 100px;
+    margin-left: 50px;
   }
 
   .menu {

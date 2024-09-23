@@ -1,0 +1,25 @@
+---
+import DocsLayout from '../../Layouts/DocsLayout.astro';
+import ProyectViewComponent from '../../Components/Organisms/ProyectViewComponent.astro'; 
+import Layout from '../../Layouts/Layout.astro';
+
+const content = [
+  { subtitulo: "La mejor forma de invitar a tu evento", texto: ["Puedes crear tu invitación en línea de manera muy rápida y sencilla.", "Una vez que te das de alta, el siguiente paso es escribir el mensaje que deseas que aparezca al compartir tu invitación por Whatsapp. Contamos con un mensaje default, pero tu puedes personalizarlo para que sea más acorde al tipo de evento que realizarás.", "Si deseas cambiarlo posteriormente lo puedes hacer en: Menú > Configuración > Mi mensaje de invitación."] },
+  { subtitulo: "Solicitar un nuevo código de acceso", texto: ["Ya que has terminado con el mensaje para tu invitación, serás redirigido al dashboard principal, donde verás dos tarjetas, una para crear tu invitación en línea y otra para crear tu checklist.", "TEXTOESPECIAL", "La versión gratuita de Lustrall te permite tener hasta 2 itinerarios. Aumenta hasta a 5 itinerarios suscribiéndote a Lustrall Premium.", "La invitación en línea de Lustrall te permite personalizar colores y tipografías. Explora sus opciones en el botón de editar."] },
+  { subtitulo: "La mejor forma de invitar a tu evento", texto: ["Una vez que esté lista tu invitación puedes enviarla vía Whatsapp, con el botón de compartir que aparece en el menú inferior.", "O tambien puedes compartirla desde la pantalla del dashboard principal."] },
+];
+
+---
+
+
+<Layout title='Lustral Creando tu invitación en línea'>
+
+    <DocsLayout>
+
+        <ProyectViewComponent 
+        title="Creando tu invitación en línea"
+        icon="landing" 
+        content={content} 
+        />
+    </DocsLayout>
+</Layout>

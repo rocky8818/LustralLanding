@@ -1,0 +1,70 @@
+---
+const { title, icon, content } = Astro.props;
+---
+
+
+<div class="project-view">
+  <h1>{title}</h1>
+  <img src=`/images/helpcards/${icon}.svg` alt="Icon" class="icon" />
+  
+  {
+  content.map((parrafo: any) => (
+    <div class="subsection">
+      <h3>{parrafo.subtitulo}</h3>
+      {
+        parrafo.texto.map((mensaje: string) => (
+            
+              mensaje == 'TEXTOESPECIAL' ? (
+                <p>1. Nombre del evento (puedes usar emojis 😎)</p>
+                <p>2. Fotografía para la portada de tu evento</p>
+                <p>3. Fecha del evento</p>
+                <p>4. Lugar general del evento</p>
+                <p>5. Itinerarios del evento</p>
+      
+                <p style="padding-left: 30px">a. Título del itinerario</p>
+                <p style="padding-left: 30px">b. Hora del evento</p>
+                <p style="padding-left: 30px">c. Nombre del lugar</p>
+                <p style="padding-left: 30px">d. Enlace al mapa de la ubicación</p>
+                <br>
+      )
+              :
+(
+                <p>{mensaje}</p>
+                <br>
+                )
+        ))
+      }
+    </div>
+  ))
+  }
+</div>
+
+<style lang="scss">
+    .project-view{
+        h1{
+            font-family: 'fraunces', sans-serif;
+            font-size: 64px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+    }
+    .icon {
+      width: 50px; /* Puedes ajustar el tamaño del icono según lo que necesites */
+      height: 50px;
+      margin-bottom: 20px;
+    }
+    .subsection {
+      margin-bottom: 20px;
+      max-width: 550px;
+    }
+    .subsection h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      font-weight: 400;
+    }
+    .subsection p {
+      font-size: 20px;
+      line-height: 1.5;
+      color: #828282;
+    }
+  </style>

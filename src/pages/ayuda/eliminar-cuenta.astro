@@ -1,0 +1,25 @@
+---
+import DocsLayout from '../../Layouts/DocsLayout.astro';
+import ProyectViewComponent from '../../Components/Organisms/ProyectViewComponent.astro'; 
+import Layout from '../../Layouts/Layout.astro';
+
+const content = [
+  { subtitulo: "Elimiando una cuenta", texto: ["Eliminar una cuenta no se puede deshacer, incluso si lo haces por accidente. ”.", "Solo puedes eliminar tu cuenta desde el dispositivo en que la diste de alta. ", "Todos los datos de tu Lustrall se guardan a nivel de tu dispositivo. Una vez que elimines tu cuenta también se eliminará toda tu información. No será posible recuperar esta información."] },
+  { subtitulo: "Pasos para elminar tu cuenta", texto: ["1. Abre Lustrall.", "2. Haz click en el menú  de la parte superior izquierda.", "3. Ingresa a la opción Configuración", "4. En la parte inferior verás el botón de eliminar cuenta. ", "5. Confirma tu decisión en el pop up de Alerta."] },
+  { subtitulo: "Borrar la app sin eliminar tu cuenta", texto: ["Es posible borrar la app de tu dispositivo sin eliminar tu cuenta. Toda la información que se guarda a nivel del dispositivo se borrará tambien. ", "Sin embargo, la información guardada a nivel de nuestros servidores se conserva por un tiempo determinado.", " Esta información comprende: Tu invitación en línea, la foto que subiste a tu invitación, los itinerarios que creaste y el diseño que armaste."] }
+];
+
+---
+
+
+<Layout title='Lustral Eliminar Cuenta'>
+
+    <DocsLayout>
+
+        <ProyectViewComponent 
+        title="Cómo eliminar tu cuenta"
+        icon="deleteaccount" 
+        content={content} 
+        />
+    </DocsLayout>
+</Layout>

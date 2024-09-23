@@ -1,0 +1,25 @@
+---
+import DocsLayout from '../../Layouts/DocsLayout.astro';
+import ProyectViewComponent from '../../Components/Organisms/ProyectViewComponent.astro'; 
+import Layout from '../../Layouts/Layout.astro';
+
+const content = [
+  { subtitulo: "Contratar Lustrall Premium", texto: ["Tener Lustrall Premium es muy sencillo. Solo ingresa al menú principal y presiona el botón que dice “Conviérte en premium”.", "Te redirigirá a nuestra tienda, donde puedes comprar tu suscripción  a Lustrall Premium.", "Cuando presiones el botón aparecerán las opciones para suscribirte según seas en Google Play o App Store. Confirma tu método de pago y presiona el botón “Suscribirse”."] },
+  { subtitulo: "Cancelar Premium", texto: ["1. Ingresa en al configuración de tu cuenta de Google Play o App Store.", "2. Busca la opción de Pagos y suscripciones.", "3. Selecciona la opción de suscripciones.","4. Selecciona suscripción a Lustrall Premium.", "5. Presiona el botón Cancelar suscripción.", "6. Confirma tu selección.", "Adicionalmente puedes seleccionar entre pausar tu suscripción si no deseas cancelarla."] },
+  { subtitulo: "Donaciones", texto: ["En nuestra tienda Lustrall también contamos con la opción de hacer una pequeña donación si quieres apoyarnos para continuar actualizando y agregando nuevas funciones. ", "Tu ayuda nos impulsa para seguir con esta tarea que nos apasiona...  y también nos permite darle de comer unos ricos premios a nuestros gatitos! 💖"] }
+];
+
+---
+
+
+<Layout title='Lustral Contratar o cancelar premium'>
+
+    <DocsLayout>
+
+        <ProyectViewComponent 
+        title="Contratar o cancelar premium"
+        icon="premium" 
+        content={content} 
+        />
+    </DocsLayout>
+</Layout>

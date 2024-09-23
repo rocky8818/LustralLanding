@@ -1,0 +1,24 @@
+---
+import DocsLayout from '../../Layouts/DocsLayout.astro';
+import ProyectViewComponent from '../../Components/Organisms/ProyectViewComponent.astro'; 
+import Layout from '../../Layouts/Layout.astro';
+
+const content = [
+  { subtitulo: "Creando una cuenta nueva", texto: ["Para todos los ususarios nuevos de Lustrall, crear una cuenta nueva es muy fácil. Una vez que terminas de ver la bienvenida, te pediremos que ingreses el correo que quieres dar de alta en tu cuenta.  Después presiona el botón que dice “Envíame mi código de acceso”.", "En unos segundos recibirás tu código de acceso  de cuatro números, en tu correo. Ingresa este código en la siguiente pantalla cuanto se te solicite, y listo! ", "Tu correo habrá sido verificado y tendrás acceso a tu cuenta Lustrall."] },
+  { subtitulo: "Recomendaciones", texto: ["Te recomendamos utilizar un correo al que tengas acceso desde el celular en el que estás usando Lustrall."] }
+];
+
+---
+
+
+<Layout title='Lustral Crear Cuenta'>
+
+    <DocsLayout>
+
+        <ProyectViewComponent 
+        title="Cómo crear una cuenta"
+        icon="newaccount" 
+        content={content} 
+        />
+    </DocsLayout>
+</Layout>
