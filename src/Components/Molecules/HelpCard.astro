@@ -16,17 +16,20 @@ const { title, subtitle, imageUrl, href } = Astro.props;
   </div>
 </a>
 
-<style>
+<style lang="scss">
+  a{
+    text-decoration: none;
+  }
   .card {
     background-color: #f7f7f7;
     height: 510px;
-    border-radius: 8px 8px 0 0; /* Solo la parte superior tiene borde redondeado */
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0; /* Se elimina el padding del contenedor principal */
+    padding: 0;
     box-sizing: border-box;
-    overflow: hidden; /* Para asegurarse de que los bordes redondeados se aplican correctamente */
+    overflow: hidden;
   }
 
   .card-image {
@@ -34,7 +37,7 @@ const { title, subtitle, imageUrl, href } = Astro.props;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px; /* Espacio alrededor de la imagen */
+    padding: 20px;
   }
 
   .card-content {
@@ -52,5 +55,24 @@ const { title, subtitle, imageUrl, href } = Astro.props;
   .card-subtitle {
     font-size: 18px;
     color: #828282;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      height: auto; /* Ajuste dinámico del alto para pantallas pequeñas */
+      border-radius: 6px;
+    }
+
+    .card-image {
+      padding: 15px; /* Reduce el padding alrededor de la imagen */
+    }
+
+    .card-title {
+      font-size: 16px; /* Ajuste de tamaño de fuente para móviles */
+    }
+
+    .card-subtitle {
+      font-size: 14px; /* Ajuste de tamaño de fuente para móviles */
+    }
   }
 </style>

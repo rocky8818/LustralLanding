@@ -13,13 +13,13 @@ import Card from '../Molecules/HelpCard.astro';
   </div>
 </div>
 
-<style>
+<style lang="scss">
   .container-large {
     margin: 0 auto;
     max-width: 1270px;
     width: 100%;
-    padding: 0 80px; /* Margen mínimo de 80px a los lados */
-    box-sizing: border-box; /* Asegura que el padding se incluya dentro del tamaño máximo */
+    padding: 0 80px; /* Mantiene los márgenes laterales grandes en pantallas anchas */
+    box-sizing: border-box;
   }
 
   .grid {
@@ -32,6 +32,7 @@ import Card from '../Molecules/HelpCard.astro';
   @media (max-width: 1270px) {
     .container-large {
       max-width: 989px;
+      padding: 0 40px;
     }
 
     .grid {
@@ -40,8 +41,14 @@ import Card from '../Molecules/HelpCard.astro';
   }
 
   @media (max-width: 768px) {
+    .container-large {
+      padding: 0 20px; /* Reduce los márgenes laterales en pantallas móviles */
+    }
+
     .grid {
       grid-template-columns: 1fr;
+      gap: 15px; /* Ajusta el espacio entre las tarjetas para pantallas más pequeñas */
+      margin: 40px auto;
     }
   }
 </style>

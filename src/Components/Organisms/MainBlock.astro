@@ -10,7 +10,7 @@ const { title, subtitle, noButton = false } = Astro.props;
   </div>
 </div>
 
-<style>
+<style lang="scss">
 
 	.SmContainer{
 		display: flex;
@@ -48,4 +48,24 @@ const { title, subtitle, noButton = false } = Astro.props;
       padding: 14px 24px;
     }
   }
+
+  @media (max-width: 768px) {
+  .SmContainer {
+    padding: 0 20px;
+  }
+
+  .firstBlock {
+    h1 {
+      font-size: 36px;
+    }
+    p {
+      font-size: 18px;
+    }
+    a {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  }
+}
+
 </style>

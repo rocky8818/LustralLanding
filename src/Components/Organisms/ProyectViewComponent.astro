@@ -40,12 +40,16 @@ const { title, icon, content } = Astro.props;
 </div>
 
 <style lang="scss">
-    .project-view{
-        h1{
+    .project-view {
+        h1 {
             font-family: 'fraunces', sans-serif;
             font-size: 64px;
             font-weight: 400;
             margin-bottom: 20px;
+
+            @media (max-width: 768px) {
+                font-size: 32px; /* Reduce el tamaño del título */
+            }
         }
     }
     .icon {
@@ -56,15 +60,27 @@ const { title, icon, content } = Astro.props;
     .subsection {
       margin-bottom: 20px;
       max-width: 550px;
+
+      @media (max-width: 768px) {
+          max-width: 100%; /* Permite que el contenido ocupe el ancho completo en móvil */
+      }
     }
     .subsection h3 {
       font-size: 24px;
       margin-bottom: 10px;
       font-weight: 400;
+
+      @media (max-width: 768px) {
+          font-size: 20px; /* Reduce el tamaño del subtítulo */
+      }
     }
     .subsection p {
       font-size: 20px;
       line-height: 1.5;
       color: #828282;
+
+      @media (max-width: 768px) {
+          font-size: 16px; /* Reduce el tamaño del texto en móvil */
+      }
     }
-  </style>
+</style>

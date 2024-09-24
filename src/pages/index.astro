@@ -1,5 +1,4 @@
 ---
-import ContainerMd from "../Components/Containers/ContainerMd.astro";
 import ListLeft from "../Components/Molecules/ListLeft.astro";
 import ListRight from "../Components/Molecules/ListRight.astro";
 import MainBlock from "../Components/Organisms/MainBlock.astro";
@@ -63,7 +62,7 @@ import Layout from "../Layouts/Layout.astro";
   </section>
   <section>
     <div style="position: relative;">
-      <img class="signatureImg" src="/Frame.png" alt="" />
+      <img class="signatureImg" src="/Frame.webp" alt="" />
     </div>
   </section>
   <section style=" margin: 400px 0">
@@ -71,7 +70,7 @@ import Layout from "../Layouts/Layout.astro";
   </section>
 </Layout>
 
-<style>
+<style lang="scss">
   section {
     margin: 50px 0;
   }
@@ -90,4 +89,24 @@ import Layout from "../Layouts/Layout.astro";
     top: -300px;
     z-index: -1;
   }
+
+  @media (max-width: 768px) {
+  section {
+    margin: 20px 0;
+  }
+
+  .bigContainer {
+    padding: 0 15px;
+  }
+
+  .mainImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .signatureImg {
+    top: -150px;
+  }
+}
+
 </style>
